@@ -2,4 +2,4 @@
 
 Angular 10 - Facebook Login Example
 
-Documentation coming soon!
+Tutorial and demo available at https://jasonwatmore.com/post/2020/09/21/angular-10-facebook-login-tutorial-example
