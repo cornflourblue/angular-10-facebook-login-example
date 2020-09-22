@@ -59,7 +59,8 @@ export class AccountService {
     }
 
     logout() {
-        FB.logout();
+        // revoke app permissions to logout completely because FB.logout() doesn't remove FB cookie
+        FB.api('/me/permissions', 'delete', null, () => FB.logout());
         this.stopAuthenticateTimer();
         this.accountSubject.next(null);
         this.router.navigate(['/login']);
